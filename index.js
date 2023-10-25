@@ -18,6 +18,8 @@ function Momen(btnId, priceId) {
     const fixer = totalAmount.toFixed(2);
 
     const getTotalFirstFloat = document.getElementById("first-total-price");
+    const finalPrice = document.getElementById("final-price");
+    finalPrice.innerText = fixer;
     getTotalFirstFloat.innerText = fixer;
 
     // Purchase disable
@@ -66,22 +68,21 @@ Momin("sofa", "sofa-title");
 // append child added
 
 // discount part
-document.getElementById('apply-btn').addEventListener('click', function(){
-  const discountPrice = document.getElementById('discount-price');
+document.getElementById("apply-btn").addEventListener("click", function () {
+  const discountPrice = document.getElementById("discount-price");
   const discountMathNotFixed = (20 / 100) * totalTaka.innerText;
   const discountMath = discountMathNotFixed.toFixed(2);
   const afterDiscountNotFixed = totalTaka.innerText - discountMath;
   const afterDiscount = afterDiscountNotFixed.toFixed(2);
 
-  const finalPrice = document.getElementById('final-price');
-  const couponCode = document.getElementById('coupon-code');
+  const finalPrice = document.getElementById("final-price");
+  const couponCode = document.getElementById("coupon-code");
   const couponValue = couponCode.value;
-  if(couponValue === 'SELL200'){
+  if (couponValue === "SELL200") {
     discountPrice.innerText = discountMath;
     finalPrice.innerText = afterDiscount;
-  }
-  else{
+  } else {
     return;
   }
-})
+});
 // discount part end
