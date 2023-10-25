@@ -231,8 +231,8 @@
                 <div class="bg-[#FFF] p-6 mb-5 rounded-lg">
                     <h1 class="text-[#111] font-semibold mb-1">Have coupon?</h1>
                     <input class="pl-1 outline-none border-gray border-2 w-32 md:w-40 py-1 mb-5" type="text"
-                        placeholder="Coupon code" name="" id=""><button disabled
-                        class="text-white bg-[#E527B2] px-3 py-2">Apply</button>
+                        placeholder="Coupon code" id="coupon-code">
+                    <button disabled id="apply-btn" class="btn text-white hover:bg-slate-800 bg-[#E527B2]">Apply</button>
                 </div>
                 <div class="bg-[#FFF] p-6 rounded-lg">
                     <div id="append-id" class="font-semibold">
@@ -240,10 +240,12 @@
                     </div>
                     <div class="font-semibold mt-3">
                         <p>Total price: <span id="first-total-price"></span> TK</p>
-                        <p>Discount: <span></span> TK</p>
-                        <p>Total: <span></span> TK</p>
+                        <p>Discount: <span id="discount-price"></span> TK</p>
+                        <p>Total: <span id="final-price"></span> TK</p>
                     </div>
-                    <button disabled id="purchase-btn" class="btn hover:bg-slate-800 w-full mt-6 bg-[#E527B2] text-white rounded-lg py-2"><label for="my_modal_6">Make Purchase</label></button>
+                    <button disabled id="purchase-btn"
+                        class="btn hover:bg-slate-800 w-full mt-6 bg-[#E527B2] text-white rounded-lg py-2"><label
+                            for="my_modal_6">Make Purchase</label></button>
                     <!-- modal -->
                     <input type="checkbox" id="my_modal_6" class="modal-toggle" />
                     <div class="modal">
@@ -254,7 +256,9 @@
                             <h3 class="font-bold text-4xl">Congratulations</h3>
                             <p class="py-4">Your Purchase the product</p>
                             <div class="modal-action flex justify-center">
-                                <label onclick="reloadNow()" id="go-home" for="my_modal_6" class="btn hover:bg-slate-800 bg-[#E527B2] text-white rounded-lg py-3 px-5">Go Home</label>
+                                <label onclick="reloadNow()" id="go-home" for="my_modal_6"
+                                    class="btn hover:bg-slate-800 bg-[#E527B2] text-white rounded-lg py-3 px-5">Go
+                                    Home</label>
                             </div>
                         </div>
                     </div>
