@@ -243,7 +243,7 @@
                         <p>Discount: <span></span> TK</p>
                         <p>Total: <span></span> TK</p>
                     </div>
-                    <button class="btn w-full mt-6 bg-[#E527B2] text-white rounded-lg py-2"><label for="my_modal_6">Make Purchase</label></button>
+                    <button disabled id="purchase-btn" class="btn hover:bg-slate-800 w-full mt-6 bg-[#E527B2] text-white rounded-lg py-2"><label for="my_modal_6">Make Purchase</label></button>
                     <!-- modal -->
                     <input type="checkbox" id="my_modal_6" class="modal-toggle" />
                     <div class="modal">
@@ -254,7 +254,7 @@
                             <h3 class="font-bold text-4xl">Congratulations</h3>
                             <p class="py-4">Your Purchase the product</p>
                             <div class="modal-action flex justify-center">
-                                <label for="my_modal_6" class="btn bg-[#E527B2] text-white rounded-lg py-3 px-5">Go Home</label>
+                                <label onclick="reloadNow()" id="go-home" for="my_modal_6" class="btn hover:bg-slate-800 bg-[#E527B2] text-white rounded-lg py-3 px-5">Go Home</label>
                             </div>
                         </div>
                     </div>

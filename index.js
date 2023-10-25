@@ -1,3 +1,5 @@
+const totalTaka = document.getElementById("first-total-price");
+const purchaseBtn = document.getElementById("purchase-btn");
 let totalAmount = 0;
 // document.getElementById('kitchen-one').addEventListener('click', function(){
 //     const value = document.getElementById('kitchen-one-price').innerText;
@@ -17,6 +19,15 @@ function Momen(btnId, priceId) {
 
     const getTotalFirstFloat = document.getElementById("first-total-price");
     getTotalFirstFloat.innerText = fixer;
+
+    // Purchase disable
+    console.log(totalTaka.innerText);
+    if (getTotalFirstFloat.innerText > 0) {
+      purchaseBtn.disabled = false;
+    } else {
+      purchaseBtn.disabled = true;
+    }
+    // Purchase disable
   });
 }
 Momen("kitchen-one", "kitchen-one-price");
@@ -55,3 +66,8 @@ Momin("cates", "cates-title");
 Momin("relax-chair", "relax-chair-title");
 Momin("children-play", "children-play-title");
 Momin("sofa", "sofa-title");
+// append child added
+
+function reloadNow() {
+  location.reload();
+}
